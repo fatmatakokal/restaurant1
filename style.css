@@ -1,0 +1,215 @@
+/* varsayilan olarak gelen ozellikleri sifirlama*/
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* arka plan alanina resim verip sabitledik ve icindeki elemanlar uzerinde kayiyor*/
+body{
+    background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url(images/italian-restaurant-img.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+
+}
+
+/* Container / ana tasiyici ozellikleri*/
+.container{
+    width: 100%;
+    height: 100vh;
+    box-sizing: border-box; /* boyutlandirmayi tamamen bize birakir*/
+    padding: 0 10%;
+    color: white;
+}
+/* header navbar alani ile menu ve logo ozellestir*/
+.navbar{
+    height: 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    height: 100px;
+    cursor: pointer;
+    border-radius: 50px;
+}
+
+.bi{
+    font-size: 50px;
+    cursor: pointer;
+    margin-right: 30px;
+    display: none;
+}
+
+.bi:hover{
+    transform: scale(1.2);
+    transition: .3s;
+}
+
+nav{
+    flex: 1;
+    text-align: right;
+}
+
+nav ul li{
+    list-style: none;
+    display: inline-block;
+    margin-left: 15px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    font-size: 15px;
+    color: white;
+    position: relative;
+}
+
+nav ul li a::after{
+    content: '';
+    height: 2px;
+    width: 0;
+    background-color: white;
+    bottom: -4px;
+    left: 0;
+    position: absolute;
+}
+
+nav ul li a:hover::after{
+    width: 100%;
+    transition: 1s;
+}
+
+
+/* Satirlama one cikan icerikleri yerlestirme */
+.row{
+    display: flex;
+    align-items: center;
+    height: 90%;
+    overflow: scroll;
+    font-style: italic;
+}
+
+
+.col{
+    flex-basis: 50%;
+    margin-top: 20px;
+    font-style: italic;
+}
+
+h1{
+    font-size: 90px;
+}
+
+p{
+    font-size: 17px;
+    line-height: 25px;
+    max-width: 500px;
+}
+.pasta{
+    padding: 20px;
+}
+.pizza{
+    padding: 20px;
+
+}
+.Desserts{
+    padding: 20px;
+}
+.drinks{
+    padding: 20px;
+}
+button{
+    font-size: 13px;
+    height: 40px;
+    width: 150px;
+    background-color: transparent;
+    border: solid red 2px;
+    border-radius: 5px;
+    margin-top: 30px;
+    cursor: pointer;
+    color: white;
+
+}
+
+button:hover{
+    font-size: 14px;
+    transition: .3s;
+    font-weight: bold;
+    border: white 2px solid;
+}
+
+/* card alanlari boyutlandirma ve animasyon*/
+.card{
+    width: 250px;
+    height: 300px;
+    background-color: red;
+    display: inline-block;
+    border-radius: 10px;
+    box-sizing: border-box;
+    cursor: pointer;
+    margin: 10px 15px;
+    background:linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)), url(images/istanbul.jpeg);
+    background-position: center;
+    background-size: cover;
+    transition: transform .5s;
+}
+.card .card1{
+    background:linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)), url(images/pizza.webp);
+    background-position: center;
+    background-size: cover;
+    height: 300px;
+    border-radius: 10px;
+}
+.card .card2{
+    background:linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)), url(images/pasta.jpeg);
+    background-position: center;
+    background-size: cover;
+    height: 300px;
+    border-radius: 10px;
+}
+.card .card3{
+    background:linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)), url(images/dessert.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 300px;
+    border-radius: 10px;
+}
+.card .card4{
+    background:linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)), url(images/drink.jpeg);
+    background-position: center;
+    background-size: cover;
+    height: 300px;
+    border-radius: 10px;
+}
+
+.card:hover{
+    transform: translateY(-10px);
+}
+
+h5{
+    text-shadow: 0 0 10px black;
+    text-indent: 10px;
+    padding: 4px;
+    font-size: large;
+}
+
+/* responsive yapmak icin*/
+@media (max-width:768px) {
+    nav{
+        display: none;
+    }
+    .bi{
+        display: block;
+    }
+    .row{
+        display: block;
+    }
+    .card{
+        width: 200px;
+    }
+    .row .col p{
+        font-size: 15px;
+        
+    }
+}
