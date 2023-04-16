@@ -3,4 +3,7 @@
 It is an project created using HTML and CSS.
 
 <h3>Screengif</h3>
-![](screen.gif)
+
+![][def]
+
+[def]: screen.gif
